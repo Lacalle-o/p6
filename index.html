@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P6-gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --orange: #FF9F47;
+            --brown: #9A5E05;
+            --blue-bg: white;
+            --brown-bg: white;
+            --black: black;
+            --autor: 'Roboto', sans-serif;
+            --título: 'Roboto Condensed', sans-serif;
+            --descripcion: 'Roboto', sans-serif;
+        }
+        img{
+            width: 100%;
+        }
+        h1{
+            font-family: var(--autor);
+            color: var(--black);
+            font-size: 0.6em;
+        }
+        h2{
+            font-family: var(--título);
+            color: var(--brown);
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        p{
+            font-family: var(--descripcion);
+            color: var(--black);
+            font-size: 0.6em;
+            font-weight: 400;
+        }
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        .card{
+            flex-basis: 23%;
+            flex-shrink: 0.2;
+            border: 0.2em solid var(--orange);
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            background: #FFD5AE;
+        }
+        .card:nth-child(1){
+            background-color:coral;
+            flex-grow: 1;
+        }
+        .card:nth-child(5){
+            flex-grow: 1;
+        }
+        .card:hover{
+            flex-grow: 1;
+            transition: flex-grow 1s;
+        }
+        .card_img{
+            width: 100%;
+            height: 270px;
+        }
+        .card_img img{
+            object-fit: cover;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="gallery">
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/01 artemisa gentileschi.jpg" alt="Una pintura de una mujer en el campo.">
+                </figure>
+                <header class="card_txt">
+                    <h1>Artemisa Gentileschi</h1>
+                    <h2>Judit decapitando a Holofornes</h2>
+                    <p>Se trata de una pintura al óleo sobre tabla, que mide 1,99 metros de alto y 1,62 m de ancho. 
+                        La heroína bíblica, junto a su doncella, se interna en el campo enemigo, seduce y luego decapita a Holofernes, el feroz general enemigo. Este cuadro es el más famoso de Artemisia Gentileschi, con el que su nombre se asocia rápidamente; lo pintó tras ser violada por su tutor Agostino Tassi.</p>
+                </header>
+            </div>
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/02 hannah hoch.png" alt="Una pintura de dos personas de mediana edad.">
+                </figure>
+                <header class="card_txt">
+                    <h1>Hanna Hoch</h1>
+                    <h2> La Novia (Pandora)</h2>
+                    <p>Hannah Höch usó el collage como herramienta y forma de expresión para su arte, sus mensajes y sus críticas sociales, en las que por supuesto abundaban reflexiones sobre su condición de mujer. Höch subtitula esta obra como Pandora aludiendo a la primera mujer según la mitología griega, y como no, fuente de todos los males del mundo para los hombres.</p>
+                </header>
+            </div>
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/03 katsushica.png" alt="Una pintura de un cíclope.">
+                </figure>
+                <header class="card_txt">
+                    <h1>Katsushika Hokusai</h1>
+                    <h2>La gran ola de Kanagawa</h2>
+                    <p>Katsushika HokusaiEsta impresión es del tipo yoko-e, es decir, en forma de paisaje, y fue realizada con un tamaño ōban, de 25 centímetros de alto por 37 de ancho.23​ El paisaje se compone de tres elementos: el mar agitado por una tormenta, tres barcos y una montaña, imagen que se complementa con la firma, la cual es claramente visible en la parte superior izquierda.</p>
+                </header>
+            </div>
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/04 goya.jpg" alt="Una pintura de una mujer hermosa con un pendiente de perla.">
+                </figure>
+                <header class="card_txt">
+                    <h1>Francisco de Goya</h1>
+                    <h2>El Aquelarre</h2>
+                    <p>El lienzo muestra un ritual de aquelarre, presidido por el Gran macho cabrío, una de las formas que toma el demonio, en el centro de la composición. A su alrededor aparecen brujas ancianas y jóvenes que le dan niños con los que, según la superstición de la época, se alimentaba. En el cielo, de noche, brilla la luna y se ven animales nocturnos volando (que podrían ser murciélagos)</p>
+                </header>
+            </div>
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/05 rembrandt.jpg" alt="Un cuadro con gente haciendo un picnic.">
+                </figure>
+                <header class="card_txt">
+                    <h1>Rembrandt</h1>
+                    <h2>La ronda de noche</h2>
+                    <p>La obra fue encargada por la Corporación de Arcabuceros de Ámsterdam para decorar el Groote Zaal, 'Gran Salón', del Kloveniersdoelen, sede de la milicia. Debido a esto, Rembrandt usó monumentales dimensiones para el lienzo.
+                        En ella aparece la milicia del capitán Frans Banninck Cocq en el momento en el que este da la orden de marchar al alférez Willem van Ruytenburch. Detrás de ellos aparecen los 18 integrantes de la Compañía, que pagaron una media de cien florines al pintor por aparecer en el cuadro, una suma más que considerable para la época.</p>
+                </header>
+            </div>
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/06 klimt.jpg" alt="">
+                </figure>
+                <header class="card_txt">
+                    <h1>Gustav Klimt</h1>
+                    <h2>El Beso</h2>
+                    <p>Gustav Klimt representa la pareja encerrada en la intimidad, mientras que el resto de la pintura se disuelve en un fondo brillante con un patrón extravagante. El patrón sugiere el estilo del Art Nouveau y las formas orgánicas del movimiento Arts and Crafts contemporáneos.​ El uso de la hoja de oro hace recordar las pinturas medievales de "oro molido", así también los zarcillos decorativos vistos en el arte occidental desde antes de la época clásica.</p>
+                </header>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
